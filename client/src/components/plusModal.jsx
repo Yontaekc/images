@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import styles from '../../src/styles.css';
+import styles from '../../src/search.css';
 
 var PlusModal = ({ data, buttonHandler, onClickHandler }) => {
   return (
