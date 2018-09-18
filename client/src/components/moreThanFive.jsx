@@ -1,7 +1,7 @@
 import React from 'react';
 import OnePic from './onePic.jsx';
 import TwoPic from './twoPic.jsx';
-import styles from '../../src/styles.css';
+import styles from '../../src/search.css';
 
 var MoreThanFive = ({ pictures, onClickHandler }) => {
   return (

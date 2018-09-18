@@ -6,7 +6,7 @@ import Button from './button.jsx';
 import PlusModal from './plusModal.jsx';
 import OnePicModal from './onePicModal.jsx';
 import data from '../../../db/fakedata.js';
-import styles from '../../src/styles.css';
+import styles from '../../src/search.css';
 
 let fakeData = data.slice(0, 1);
 

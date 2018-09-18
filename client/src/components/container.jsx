@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../src/styles.css';
+import styles from '../../src/search.css';
 import MoreThanFive from './moreThanFive.jsx';
 import LessThanFive from './lessThanFive.jsx';
 

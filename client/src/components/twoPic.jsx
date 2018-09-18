@@ -1,6 +1,6 @@
 import React from 'react';
 import Onepic from './onePic.jsx';
-import styles from '../../src/styles.css';
+import styles from '../../src/search.css';
 
 var TwoPic = ({ pictureOne, pictureTwo, onClickHandler }) => {
   return (
