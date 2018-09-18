@@ -3,6 +3,7 @@ import OnePic from './onePic.jsx';
 import TwoPic from './twoPic.jsx';
 import Container from './container.jsx';
 import Button from './button.jsx';
+// import PlusModal from './plusModal.jsx';
 import PlusModal from './plusModal.jsx';
 import OnePicModal from './onePicModal.jsx';
 import data from '../../../db/fakedata.js';
@@ -16,18 +17,28 @@ class App extends React.Component {
     this.onCloseHandler = this.onCloseHandler.bind(this);
     this.onLeftClick = this.onLeftClick.bind(this);
     this.onRightClick = this.onRightClick.bind(this);
+    this.buttonHandler = this.buttonHandler.bind(this);
+    this.gridClickHandler = this.gridClickHandler.bind(this);
     this.state = {
       data: fakeData,
       onePicButton: false,
+      wholePicButton: false,
       clickedPic: ''
     };
+  }
+
+  buttonHandler() {
+    this.setState(prevState => ({
+      wholePicButton: !prevState.wholePicButton
+    }));
   }
 
   onClickHandler(picture) {
     console.log(picture);
     this.setState(
       {
-        clickedPic: picture
+        clickedPic: picture,
+        wholePicButton: false
       },
       () => {
         this.setState({
@@ -69,6 +80,13 @@ class App extends React.Component {
     });
   }
 
+  gridClickHandler() {
+    this.setState({
+      onePicButton: false,
+      wholePicButton: true
+    });
+  }
+
   render() {
     return (
       <div>
@@ -79,11 +97,19 @@ class App extends React.Component {
             onCloseHandler={this.onCloseHandler}
             onLeftClick={this.onLeftClick}
             onRightClick={this.onRightClick}
+            gridClickHandler={this.gridClickHandler}
+          />
+        ) : this.state.wholePicButton ? (
+          <PlusModal
+            data={this.state.data[0]}
+            buttonHandler={this.buttonHandler}
+            onClickHandler={this.onClickHandler}
           />
         ) : (
           <div>
             <Container pictures={this.state.data[0].picture} onClickHandler={this.onClickHandler} />
-            <PlusModal data={this.state.data[0]} />
+            {/* <PlusModal data={this.state.data[0]} /> */}
+            <Button pictures={this.state.data[0].picture} buttonHandler={this.buttonHandler} />
           </div>
         )}
       </div>
