@@ -1,12 +1,13 @@
 import React from 'react';
 import Onepic from './onePic.jsx';
+import styles from '../../src/styles.css';
 
 var TwoPic = ({ pictureOne, pictureTwo, onClickHandler }) => {
   return (
-    <div className="picDiv">
-      <div className="onePic-col">
-        <div className="onePic-wrapper">
-          <div className="onePic-zoom">
+    <div className={styles.picDiv}>
+      <div className={styles.onePicCol}>
+        <div className={styles.onePicWrapper}>
+          <div className={styles.onePicZoom}>
             <img
               src={pictureOne}
               onClick={() => {
@@ -15,8 +16,8 @@ var TwoPic = ({ pictureOne, pictureTwo, onClickHandler }) => {
             />
           </div>
         </div>
-        <div className="onePic-wrapper">
-          <div className="onePic-zoom">
+        <div className={styles.onePicWrapper}>
+          <div className={styles.onePicZoom}>
             <img
               src={pictureTwo}
               onClick={() => {

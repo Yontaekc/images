@@ -1,7 +1,7 @@
 import React from 'react';
-import ShowAll from './modalButtons/showAll.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faTh, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import styles from '../../src/styles.css';
 
 var OnePicModal = ({
   picture,
@@ -12,14 +12,14 @@ var OnePicModal = ({
   gridClickHandler
 }) => {
   return (
-    <div className="onePicModal">
-      <div className="onePicHeader">
+    <div className={styles.onePicModal}>
+      <div className={styles.onePicHeader}>
         <span>{restaurant.name}</span>
-        <div className="showAll-wrapper">
-          <div className="pictureNum">
+        <div className={styles.showAllWrapper}>
+          <div className={styles.pictureNum}>
             {restaurant.picture.indexOf(picture) + 1} of {restaurant.picture.length}
           </div>
-          <div className="showAll" onClick={gridClickHandler}>
+          <div className={styles.showAll} onClick={gridClickHandler}>
             <FontAwesomeIcon icon={faTh} size="2x" />
           </div>
           <div className="close" onClick={onCloseHandler}>
@@ -27,19 +27,19 @@ var OnePicModal = ({
           </div>
         </div>
       </div>
-      <div className="onePicImg">
-        <div className="onePicContainer">
+      <div className={styles.onePicImg}>
+        <div className={styles.onePicContainer}>
           <div
-            className="onePicButton"
+            className={styles.onePicButton}
             onClick={() => {
               onLeftClick(picture);
             }}
           >
-            <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+            <FontAwesomeIcon style={{ color: 'white' }} icon={faChevronLeft} size="2x" />
           </div>
           <img src={picture} />
           <div
-            className="onePicButton"
+            className={styles.onePicButton}
             onClick={() => {
               onRightClick(picture);
             }}
