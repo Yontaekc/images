@@ -3,7 +3,14 @@ import ShowAll from './modalButtons/showAll.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faTh, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-var OnePicModal = ({ picture, restaurant, onCloseHandler, onLeftClick, onRightClick }) => {
+var OnePicModal = ({
+  picture,
+  restaurant,
+  onCloseHandler,
+  onLeftClick,
+  onRightClick,
+  gridClickHandler
+}) => {
   return (
     <div className="onePicModal">
       <div className="onePicHeader">
@@ -12,7 +19,7 @@ var OnePicModal = ({ picture, restaurant, onCloseHandler, onLeftClick, onRightCl
           <div className="pictureNum">
             {restaurant.picture.indexOf(picture) + 1} of {restaurant.picture.length}
           </div>
-          <div className="showAll">
+          <div className="showAll" onClick={gridClickHandler}>
             <FontAwesomeIcon icon={faTh} size="2x" />
           </div>
           <div className="close" onClick={onCloseHandler}>
