@@ -1,21 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import styles from '../../src/styles.css';
 
 var PlusModal = ({ data, buttonHandler, onClickHandler }) => {
   return (
-    <div id="modalContent">
-      <div className="modalHeader">
-        <div id="plusTitle">{data.name}</div>
-        <div className="close plus" onClick={buttonHandler}>
+    <div className={styles.modalContent}>
+      <div className={styles.modalHeader}>
+        <div className={styles.plusTitle}>{data.name}</div>
+        <div className={`${styles.close} ${styles.plus}`} onClick={buttonHandler}>
           <FontAwesomeIcon icon={faTimes} size="2x" />
         </div>
       </div>
-      <div className="plusContainer">
+      <div className={styles.plusContainer}>
         {data.picture.map((picture, index) => {
           return (
             <div
-              className="popup-img"
+              className={styles.popupImg}
               onClick={() => {
                 onClickHandler(picture);
               }}

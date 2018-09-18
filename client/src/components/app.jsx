@@ -3,10 +3,10 @@ import OnePic from './onePic.jsx';
 import TwoPic from './twoPic.jsx';
 import Container from './container.jsx';
 import Button from './button.jsx';
-// import PlusModal from './plusModal.jsx';
 import PlusModal from './plusModal.jsx';
 import OnePicModal from './onePicModal.jsx';
 import data from '../../../db/fakedata.js';
+import styles from '../../src/styles.css';
 
 let fakeData = data.slice(0, 1);
 
@@ -106,9 +106,8 @@ class App extends React.Component {
             onClickHandler={this.onClickHandler}
           />
         ) : (
-          <div>
+          <div className={styles.wholeApp}>
             <Container pictures={this.state.data[0].picture} onClickHandler={this.onClickHandler} />
-            {/* <PlusModal data={this.state.data[0]} /> */}
             <Button pictures={this.state.data[0].picture} buttonHandler={this.buttonHandler} />
           </div>
         )}

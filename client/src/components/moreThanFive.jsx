@@ -1,10 +1,11 @@
 import React from 'react';
 import OnePic from './onePic.jsx';
 import TwoPic from './twoPic.jsx';
+import styles from '../../src/styles.css';
 
 var MoreThanFive = ({ pictures, onClickHandler }) => {
   return (
-    <div id="inner">
+    <div className={styles.inner}>
       <OnePic pictures={pictures[0]} onClickHandler={onClickHandler} />
       <TwoPic pictureOne={pictures[1]} pictureTwo={pictures[2]} onClickHandler={onClickHandler} />
       <OnePic pictures={pictures[3]} onClickHandler={onClickHandler} />
