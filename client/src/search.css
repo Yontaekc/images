@@ -183,6 +183,12 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 800;
 }
 
 .plusContainer {
@@ -191,7 +197,7 @@ svg {
   max-height: 100%;
   object-fit: contain;
   text-align: center;
-  z-index: 50;
+  overflow-y: auto;
 }
 
 .popupImg:hover {
@@ -250,7 +256,7 @@ svg {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 800;
 }
 
 .onePicHeader span {
@@ -270,8 +276,13 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 100%;
+  margin-top: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 500;
   overflow: auto;
   text-align: center;
 }
