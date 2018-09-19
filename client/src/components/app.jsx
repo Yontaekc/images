@@ -107,8 +107,11 @@ class App extends React.Component {
           />
         ) : (
           <div className={styles.wholeApp}>
-            <Container pictures={this.state.data[0].picture} onClickHandler={this.onClickHandler} />
-            <Button pictures={this.state.data[0].picture} buttonHandler={this.buttonHandler} />
+            <Container
+              pictures={this.state.data[0].picture}
+              onClickHandler={this.onClickHandler}
+              buttonHandler={this.buttonHandler}
+            />
           </div>
         )}
       </div>
