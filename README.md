@@ -18,7 +18,7 @@ Follow the steps below to run the server!
 
 ### Installing
 
-Install all the requried node modules.
+Install all the required node modules.
 
 In the terminal, run npm install
 
