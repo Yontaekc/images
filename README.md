@@ -1,39 +1,36 @@
-# Project Name
+# Images Module
 
-> Project description
+Module that displays image carousel of particular restaurant. There are 5 more modules that combine to complete the whole web page. Links to other repositories can be found in 'Related Projects' section.
+
+![alt text](https://s3-us-west-1.amazonaws.com/realyon/Screen+Shot+2018-12-10+at+8.52.51+PM.png)
+![alt text](https://s3-us-west-1.amazonaws.com/realyon/Screen+Shot+2018-12-10+at+8.53.07+PM.png)
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+- https://github.com/Yontaekc/nearbyPlaces
+- https://github.com/s-k-y-m/info
+- https://github.com/s-k-y-m/reviews
+- https://github.com/s-k-y-m/navsearch
+- https://github.com/s-k-y-m/contact
 
-## Table of Contents
+## Getting Started
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+Follow the steps below to run the server!
 
-## Usage
+### Installing
 
-> Some usage instructions
+Install all the requried node modules.
 
-## Requirements
+In the terminal, run npm install
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
+```
 npm install
 ```
 
+Also run nodemon to run the server
+
+```
+npm run server-dev
+```
+
+After running the nodemon, go to http://localhost:3006 to see working page!
