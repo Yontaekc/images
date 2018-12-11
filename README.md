@@ -3,7 +3,6 @@
 Module that displays image carousel of particular restaurant. There are 5 more modules that combine to complete the whole web page. Links to other repositories can be found in 'Related Projects' section.
 
 ![alt text](https://s3-us-west-1.amazonaws.com/realyon/Screen+Shot+2018-12-10+at+8.52.51+PM.png)
-![alt text](https://s3-us-west-1.amazonaws.com/realyon/Screen+Shot+2018-12-10+at+8.53.07+PM.png)
 
 ## Related Projects
 
